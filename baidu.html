@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>
+	百度一下,你就知道!
+</title>
+<style type="text/css">
+	.top{
+		width:100%;
+		height:35px;
+	}
+	.top>.title{
+		height:35px;
+		float:right;
+	}
+	.top>.title>span{
+		line-height:40px;
+		float:right;
+	}
+	.top>.title>span>.bold{
+		font-weight:bold;	
+	}
+	.top>.title>span>a{
+		font-size:13px;
+		font-family:"宋体";
+		color:	#000000;
+		text-decoration:underline;
+		margin:7px;
+	}
+	.top>.title>span>a:hover{
+		color:blue;
+	}
+	.more>.p {
+		border:0;
+		height:25px;
+		width:60px;
+		background:#1E90FF;
+		color:#fff;
+		padding:2px;
+		
+	}
+	.products{
+		padding:0;
+		display:none;
+		position:absolute;
+	}
+	.nav2 {
+		position:relative;
+	}
+	.more .p:hover+.products{
+		display:block;
+		list-style-type:none;
+	}
+	<!--.products li img+a{
+		clear:both;
+	}-->
+	.more {
+		display:inline;
+	}
+	.logo{
+		text-align:center;
+		margin-bottom:30px;
+	}
+	<!--.search{
+		text-align:center;
+	}-->
+	#s{
+		width:550px;
+		height:30px;
+		position:relative;
+		margin:0 auto;
+		float:left;
+		position:relative;
+		left:27%;
+	}
+	.submit{
+		border:0px;
+		width:100px;
+		height:36px;
+		background:#1E90FF;
+		color:#fff;
+		font-size:15px;
+		margin:0 auto;
+		float:left;
+		position:relative;
+		left:27%;
+	}
+	.l{
+		width:auto;
+		height:auto;
+		max-width:100%;
+		max-height:100%
+	}
+	.foot{
+		width:100%;
+		clear:both;
+		text-align:center;
+		position:absolute;
+		bottom:70px;
+		
+	}
+	.last{
+		width:100%;
+		clear:both;
+		text-align:center;
+		
+		position:absolute;
+		bottom:30px;
+	}
+	.foot>a{
+		font-size:13px;
+		color:#808080;
+		font-family:"宋体";
+	}
+	p,p>a{
+		font-size:13px;
+		color:#808080;
+		font-family:"宋体";
+	}
+</style>
+</head>
+<body>
+<!-- 总结:
+	1.在form中的两个<input type="text">合起来中间是存在空隙的.
+		解决:为他们设置float属性,但是一旦设置了float属性之后,text-align就会不能使用.怎么办呢?
+			给他们设置position:relative,然后就原来位置进行移动.
+	2.设置了float属性之后会影响到页尾, 所以需要用到clear:both.
+	
+-->
+	<div class="top">
+		<div class="title">
+			<span>
+				<a class="bold" href="#">糯米</a>
+				<a class="bold" href="#">新闻</a>
+				<a class="bold" href="https://www.hao123.com/?tn=99802739_hao_pg">hao123</a>
+				<a class="bold" href="#">地图</a>
+				<a class="bold" href="#">视频</a>
+				<a class="bold" href="#">贴吧</a>
+				<a href="#">登陆</a>
+				<a href="#" class="nav2">设置</a>
+				<div class="more">
+					<input type="submit" value="更多产品" name="submit" class="p" />&nbsp;
+					<ul class="products">
+						<li><a href="#">音乐</a></li>
+						<li><a href="#">图片</a></li>
+						<li><a href="#">知道</a></li>
+						<li><a href="#">文库</a></li>
+						<li><a href="#">风云榜</a></li>
+						<!--
+						<li><img src="./music.jpg" /><a href="#">音乐</a></li>
+						<li><img src="./music.jpg" /><a href="#">图片</a></li>
+						<li><img src="./music.jpg" /><a href="#">知道</a></li>
+						<li><img src="./music.jpg" /><a href="#">文库</a></li>
+						<li><img src="./music.jpg" /><a href="#">风云榜</a></li> -->
+						<li><a href="#">全部产品>></a></li>
+					</ul>
+				</div>
+			</span>
+		</div>
+	</div>
+	<!-- 中间部分-->
+	<div class="logo">
+		<img src="./logo.png" style="width:280px;height:130px;" class="l" />
+	</div>
+	<div class="search">		
+		<form>
+			<label for="s"></label>
+			<input type="text" id="s" name="s" />
+			<input type="submit" value="百度一下" class="submit" />
+		</form>
+	</div>
+	<!-- 尾部 -->
+	<div class="foot">
+	
+		<a href="#" >把百度设为主页</a>
+		<a href="#" >关于百度</a>
+		<a href="#" >About Baidu</a>
+		<a href="#" >百度推广</a>
+	
+	</div>
+	<div class="last">
+	<p>
+		©2017 Baidu<a href="#" >使用百度前必读</a>&nbsp;<a href="#" >意见反馈</a>京ICP证030173号&nbsp;&nbsp;<a href="#">京公网安备11000002000001号</a>
+		</p>
+	</div>
+</body>
+</html>
+
+
